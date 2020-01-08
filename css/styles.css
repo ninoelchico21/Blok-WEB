@@ -1,0 +1,390 @@
+* {
+    box-sizing: border-box;
+    /*margin en padding worden naar 0 gezet, zodat ik er zelf mee kan spelen*/
+    margin: 0;
+    padding: 0;
+}
+
+
+/************************************************
+                        BODY
+*************************************************/
+
+body {
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    margin: 0;
+}
+
+
+
+/************************************************
+                      TEKST
+*************************************************/
+
+h1 {
+    display: flex;
+    align-self: center;
+    font-family: 'acumin-pro-condensed', sans-serif;
+    /*40px*/
+    font-size: 2.5em;
+    color: rgb(0, 102, 51);
+}
+
+h2 {
+    font-family: 'acumin-pro-condensed', sans-serif;
+    /*35px*/
+    font-size: 2.1875em;
+    /*10px*/
+    margin-bottom: 0.625em;
+}
+
+#h2spotlight {
+    font-family: 'acumin-pro-condensed', sans-serif;
+    color: rgb(218, 223, 104);
+    /*35px*/
+    font-size: 2.1875em;
+    /*10px*/
+    margin-bottom: 0.625em;
+}
+
+h3 {
+    font-family: 'acumin-pro-condensed', sans-serif;
+    /*30px*/
+    font-size: 1.875em;
+    /*10px*/
+    margin-bottom: 0.625em;
+}
+
+h4 {
+    font-family: 'acumin-pro-condensed', sans-serif;
+    /*25px*/
+    font-size: 1.5625em;
+}
+
+p {
+    /*10px*/
+    margin-top: 0.625em;
+    margin-bottom: 0.625em;
+    font-family: 'acumin-pro', sans-serif;
+}
+
+
+/* #update-tekst {
+    display: flex;
+    align-items: center;
+} */
+
+
+
+
+/************************************************
+                      IMAGES
+*************************************************/
+
+.reviews {
+    width: 100%;
+    /*161px*/
+    max-width: 10.0625em;
+    /*10px*/
+    margin-bottom: 0.625em;
+}
+
+#driesterren {
+    width: 100%;
+    /*95px*/
+    max-width: 5.9375em;
+    /*10px*/
+    margin-bottom: 0.625em;
+}
+
+#viersterren {
+    width: 100%;
+    /*129px*/
+    max-width: 8.0625em;
+    /*10px*/
+    margin-bottom: 0.625em;
+}
+
+#bbqimg {
+    width: 100%;
+    /*300px*/
+    max-width: 18.75em;
+}
+
+.foodtruck {
+    width: 100%;
+    /*150px*/
+    max-width: 9.375em;
+}
+
+.foodtrucksimg {
+    width: 100%;
+    /*350px*/
+    max-width: 21.875em;
+}
+
+
+
+/************************************************
+                      BUTTONS
+*************************************************/
+
+button {
+    background-color: rgb(0, 102, 51);
+    color: rgb(218, 223, 104);
+    /*10px*/
+    margin-top: 0.625em;
+    /*10px*/
+    padding: 0.625em;
+    /*10px*/
+    border-radius: 0.625em;
+    /*25px*/
+    font-size: 1.5625em;
+    font-family: 'acumin-pro-condensed', sans-serif;
+    border: none;
+}
+
+
+/* #laad-meer {
+    display: flex;
+    align-items: center;
+} */
+
+/*    DIT IS DE STYLING VAN HET BACK-TO-TOP BUTTON:*/
+/*
+.top-link {
+    transition: all .25s ease-in-out;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    display: inline-flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    margin: 0 3em 3em 0;
+    border-radius: 20%;
+    padding: .25em;
+    width: 80px;
+    height: 80px;
+    background-color: #006633;
+}
+
+.top-link.show {
+    visibility: visible;
+    opacity: 1;
+}
+
+.top-link.hide {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.top-link svg {
+    fill: #DADF68;
+    width: 26px;
+    height: 13px;
+}
+
+.top-link:hover {
+    background-color: #005D2F;
+}
+
+.top-link:hover svg {
+    fill: #DADF68;
+}
+*/
+/*NOG AAN TE PASSEN ! ! ! !*/
+/************************************************
+                      HEADER
+*************************************************/
+
+header {
+    background-color: rgb(218, 223, 104);
+}
+
+header div {
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(218, 223, 104);
+}
+
+/*logo versiering*/
+#logo {
+    display: flex;
+    /*200px*/
+    width: 12.5em;
+    /*134px*/
+    height: 8.375em;
+    /*20px*/
+    padding: 1.25em;
+}
+
+
+
+/************************************************
+                      NAV
+*************************************************/
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    /*15px*/
+    padding: 0.9375em 0;
+    width: 100%;
+    background-color: rgb(0, 102, 51);
+    list-style: none;
+}
+
+/*hier maak ik de nav resposive en breekt ie bij ..px*/
+@media (min-width:600px) {
+    nav ul {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
+
+nav ul a {
+    /*20px*/
+    margin: 1.25em;
+    font-family: 'acumin-pro-semi-condensed', sans-serif;
+    /*20px*/
+    font-size: 1.25em;
+    background-color: rgb(0, 102, 51);
+    color: rgb(218, 223, 104);
+    text-decoration: none;
+}
+
+nav ul a:hover {
+    font-weight: bold;
+}
+
+
+
+/************************************************
+                      MAIN (Articles)
+*************************************************/
+
+main {
+    width: 100%;
+}
+
+* article {
+    display: flex;
+    flex-direction: column;
+    padding: 3% 8%;
+    /*27px*/
+    line-height: 1.6875em;
+}
+
+#articlespotlight {
+    background-color: rgb(53, 180, 161);
+    color: rgb(255, 255, 255);
+}
+
+.articlesoverig {
+    background-color: rgb(218, 223, 104);
+    /*60px*/
+    margin: 3.75em;
+    /*20px*/
+    border-radius: 1.25em;
+}
+
+
+/************************************************
+                      MAIN (Form)
+*************************************************/
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    padding: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(53, 180, 161);
+    color: rgb(255, 255, 255);
+}
+
+label {
+    width: 20%;
+    font-size: 15px;
+    font-family: 'acumin-pro', sans-serif;
+    display: block;
+    /*25px*/
+    margin: 1.5625em 0;
+    text-transform: lowercase;
+}
+
+legend {
+    /*25px*/
+    font-size: 1.5625em;
+    font-family: 'acumin-pro-condensed', sans-serif;
+}
+
+fieldset {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 5px solid;
+    border-color: rgb(218, 223, 104);
+    border-radius: 4px;
+    margin: 20px 0;
+    padding-left: 5%;
+    padding-right: 5%;
+
+}
+
+input {
+    font-size: 15px;
+    color: black;
+    border: 2px solid steelblue;
+
+}
+
+input[type=text] {
+    width: 100%;
+    border-radius: 4px;
+    margin: 5px 0;
+    padding: 10px 10px;
+}
+
+input[type=email] {
+    width: 100%;
+    border-radius: 4px;
+    margin: 5px 0;
+    padding: 10px 10px;
+}
+
+input[type=tel] {
+    width: 100%;
+    border-radius: 4px;
+    margin: 5px 0;
+    padding: 10px 10px;
+}
+
+
+/************************************************
+                      FOOTER
+*************************************************/
+
+footer {
+    display: flex;
+    flex-direction: column;
+    font-family: 'acumin-pro-condensed', sans-serif;
+    /*25px*/
+    font-size: 1.5625em;
+    background-color: rgb(0, 102, 51);
+    color: rgb(218, 223, 104);
+    margin: 0;
+}
+
+/*hier maak ik de nav resposive en breekt ie bij ..px*/
+@media (min-width:750px) {
+    footer {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}

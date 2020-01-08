@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <!--    font acumin-->
+    <link rel="stylesheet" href="https://use.typekit.net/ewh4lpc.css">
+
+</head>
+
+<body>
+
+    <header>
+        <div>
+            <a href="index.html"><img src="images/rent-a-foodtruck-logo.png" id="logo" alt="Rent-a-Foodtruck logo"></a>
+            <h1>Rent-a-Foodtruck</h1>
+        </div>
+        <nav>
+            <ul>
+
+                <li><a href="index.html">BOEKEN</a></li>
+                <li><a href="index.html">MIJN AANVRAGEN/BOEKINGEN</a></li>
+                <li><a href="index.html">FAVORIETEN</a></li>
+                <li><a href="form.html">CONTACT</a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <form action="">
+            <h2>Contact</h2>
+            <fieldset>
+
+                <legend>Personalia</legend>
+
+                <label for="customer-type">Wat voor klant bent u?
+                    <select name="client" id="client">
+                        <option value="consumer">Consument</option>
+                        <option value="business">Zakelijk</option>
+                    </select>
+
+                </label>
+
+
+
+                <fieldset>
+
+                    <legend>Aanhef</legend>
+
+                    <label for="gender">
+                        <input type="radio" name="gender" value="male" required="required">Meneer
+                    </label>
+
+                    <label for="gender">
+                        <input type="radio" name="gender" value="female" required="required">Mevrouw
+                    </label>
+
+                </fieldset>
+
+
+                <label for="firstname">Voornaam
+                    <input type="text" name="firstname" id="firstname" maxlength="20" placeholder="Vb.Michelino" required="required">
+                </label>
+
+
+                <label for="lastname">Achternaam
+                    <input type="text" name="lastname" id="lastname" maxlength="20" placeholder="Vb.Kelly" required="required">
+                </label>
+
+                <label for="birthdate">Geboortedatum
+                    <input type="date" name="birthdate" id="birthdate" required="required">
+                </label>
+
+
+            </fieldset>
+
+            <fieldset>
+
+                <legend>Contactgegevens</legend>
+                <label for="email">E-mailadres
+                    <input type="email" name="email" id="email" placeholder="naam@example.com" required>
+                </label>
+
+                <label for="tel">Telefoonnummer
+                    <input type="tel" name="tel" id="tel" maxlength="11" placeholder="+31">
+                </label>
+
+
+            </fieldset>
+
+            <button type="submit">Verzenden</button>
+
+        </form>
+    </main>
+
+    <footer>
+        <section>Tel: +310621153828</section>
+        <section>E-mail: mail@rent-a-foodtruck.nl</section>
+        <section>Copyright Michelino Kelly</section>
+    </footer>
+
+    <!--   BACK TO TOP BUTTON SVG CODE-->
+    <!--
+    <a class="top-link hide" href="" id="js-top">
+        <svg version="1.1" id="Laag_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 109 54.6" style="enable-background:new 0 0 109 54.6;" xml:space="preserve">
+            <path d="M0,54.7L54.3,0C72.6,18.2,90.8,36.4,109,54.6C72.7,54.7,36.3,54.7,0,54.7z" />
+        </svg></a>
+-->
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
