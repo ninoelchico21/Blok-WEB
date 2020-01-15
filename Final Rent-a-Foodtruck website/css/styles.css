@@ -1,0 +1,725 @@
+* {
+    box-sizing: border-box;
+    /*margin en padding worden naar 0 gezet, zodat ik er zelf mee kan spelen*/
+    margin: 0;
+    padding: 0;
+}
+
+
+/************************************************
+                        BODY
+*************************************************/
+
+body {
+    overflow-x: hidden;
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    margin: 0;
+}
+
+
+
+/************************************************
+                      TEKST
+*************************************************/
+
+h1 {
+    transform: translateX(200%);
+}
+
+#title {
+    /*16px*/
+    margin-left: 1em;
+}
+
+/*hierbij verberg ik de h1 buiten de viewport bij 600px. Heb dit gedaan i.p.v. display none, zodat screenreaders het nog kunne lezen*/
+@media (min-width:600px) {
+    h1 {
+        transform: translateX(0%);
+        display: flex;
+        align-self: center;
+        font-family: 'acumin-pro-condensed', sans-serif;
+        /*40px*/
+        font-size: 2.5em;
+        color: rgb(0, 102, 51);
+    }
+}
+
+
+h2 {
+    font-family: 'acumin-pro-condensed', sans-serif;
+    /*35px*/
+    font-size: 2.1875em;
+    /*10px*/
+    margin-bottom: 0.625em;
+
+}
+
+#h2spotlight {
+    font-family: 'acumin-pro-condensed', sans-serif;
+    color: rgb(218, 223, 104);
+    /*35px*/
+    font-size: 2.1875em;
+    /*10px*/
+    margin-bottom: 0.625em;
+}
+
+h3 {
+    font-family: 'acumin-pro-condensed', sans-serif;
+    /*30px*/
+    font-size: 1.875em;
+    /*10px*/
+    margin-bottom: 0.625em;
+}
+
+h4 {
+    font-family: 'acumin-pro-condensed', sans-serif;
+    /*25px*/
+    font-size: 1.5625em;
+}
+
+h5 {
+    display: flex;
+    justify-content: center;
+    /*32px*/
+    font-size: 2em;
+    text-shadow: 3px 3px rgb(218, 223, 104);
+    color: rgb(53, 180, 161);
+    transform: skewY(-20deg);
+
+}
+
+h6 {
+    display: flex;
+    justify-content: center;
+    /*32px*/
+    font-size: 2em;
+    text-shadow: 3px 3px rgb(218, 223, 104);
+    color: rgb(53, 180, 161);
+    transform: rotate(0.5turn)skewY(-20deg);
+}
+
+p {
+    /*10px*/
+    margin-top: 0.625em;
+    margin-bottom: 0.625em;
+    font-family: 'acumin-pro', sans-serif;
+}
+
+/************************************************
+                      IMAGES
+*************************************************/
+
+.reviews {
+    width: 100%;
+    /*161px*/
+    max-width: 10.0625em;
+    /*10px*/
+    margin-bottom: 0.625em;
+}
+
+#driesterren {
+    width: 100%;
+    /*95px*/
+    max-width: 5.9375em;
+    /*10px*/
+    margin-bottom: 0.625em;
+}
+
+#viersterren {
+    width: 100%;
+    /*129px*/
+    max-width: 8.0625em;
+    /*10px*/
+    margin-bottom: 0.625em;
+}
+
+#bbqimg {
+    width: 100%;
+    /*300px*/
+    max-width: 18.75em;
+    max-height: 18.75em;
+    margin-right: 10px;
+    margin-bottom: 10px;
+
+}
+
+.foodtruck {
+    width: 100%;
+    /*150px*/
+    max-width: 9.375em;
+}
+
+.foodtrucksimg {
+    width: 100%;
+    /*350px*/
+    max-width: 21.875em;
+    /*233px*/
+    max-height: 14.5625em;
+    /*10px*/
+    margin-right: 0.625em;
+    margin-bottom: 0.625em;
+}
+
+
+
+/************************************************
+                      BUTTONS
+*************************************************/
+
+button {
+    background-color: rgb(0, 102, 51);
+    color: rgb(218, 223, 104);
+    /*10px*/
+    margin-top: 0.625em;
+    /*10px*/
+    padding: 0.625em;
+    /*10px*/
+    border-radius: 0.625em;
+    /*25px*/
+    font-size: 1.5625em;
+    font-family: 'acumin-pro-condensed', sans-serif;
+    border: none;
+}
+
+button:hover {
+    background-color: rgb(53, 180, 161);
+    color: rgb(255, 255, 255);
+    transition: .5s ease-out;
+}
+
+#specialbutton:hover {
+    background-color: rgb(0, 102, 51);
+    color: rgb(255, 255, 255);
+}
+
+
+/************************************************
+                      HEADER
+*************************************************/
+
+header div {
+    background-color: rgb(218, 223, 104);
+    display: flex;
+    flex-direction: row;
+    align-content: space-around;
+    width: 100%;
+}
+
+/*logo versiering*/
+#logo {
+    /*200px*/
+    width: 12.5em;
+    /*134px*/
+    height: 8.375em;
+    /*20px*/
+    padding: 1.25em;
+}
+
+
+
+/************************************************
+                      NAV
+*************************************************/
+
+/* Hieronder vind je de navigatiestijlen, met translateX verplaats(verberg) je de menu items buiten je viewport.*/
+nav {
+    transform: translateX(100%);
+    background: rgb(0, 102, 51);
+    width: 100%;
+    transition: .3s;
+}
+
+
+
+/* Met de code hieronder laat je de menu items weer tevoorschijn komen in je viewport */
+nav.active {
+    transform: translateX(0);
+    padding: 200px 8px 295px 8px;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+nav ul a {
+    /*20px*/
+    margin: 1.25em;
+    text-decoration: none;
+    font-family: 'acumin-pro-semi-condensed', sans-serif;
+    /*20px*/
+    font-size: 1.25em;
+    font-weight: bold;
+    background-color: rgb(0, 102, 51);
+    color: rgb(218, 223, 104);
+    text-decoration: none;
+    letter-spacing: 1px;
+    line-height: 32px;
+}
+
+/*hier laat ik de nav desktopversie verschijnen bij 748px*/
+@media (min-width:748px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    nav {
+        padding: 15px;
+    }
+
+    nav ul {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    nav.active {
+        padding: 15px;
+    }
+}
+
+
+/* Stijling van de states*/
+a:hover {
+    transition: .5s;
+    color: rgb(218, 223, 104);
+}
+
+a:active {
+    color: rgb(255, 255, 255);
+}
+
+a:focus {
+    border: 1px solid;
+    color: rgb(53, 180, 161);
+}
+
+
+nav ul a:hover {
+    color: rgb(255, 255, 255);
+}
+
+.clickstate {
+    color: rgb(255, 255, 255);
+}
+
+
+/* :last-child pakt de laatste elelemt binnen een parent, dus de laatste div in de div */
+header div:last-child {
+    display: flex;
+    align-items: center;
+    position: relative;
+    /*48px*/
+    width: 3em;
+    /*32px*/
+    height: 2em;
+    /*55px 0 0 -70px*/
+    margin: 3.4375em 0 0 -4.375em;
+    cursor: pointer;
+}
+
+
+/* hieronder zie je de drie lijnen van het menu, :before de eerste lijn, span de tweede en :after de derde. */
+span {
+    display: block;
+    width: 100%;
+    /*6.4px*/
+    height: 0.4em;
+    background: rgb(0, 102, 51);
+    /*4px*/
+    border-radius: 0.25em;
+}
+
+/* Dit de algemene stijl voor de ::before and ::after */
+span::before,
+span::after {
+    content: '';
+    width: 100%;
+    /*6.4px*/
+    height: 0.4em;
+    position: absolute;
+    background: rgb(0, 102, 51);
+    /*4px*/
+    border-radius: 0.25em;
+    transition: .5s;
+}
+
+/* positie: aan de bovenkant van de div */
+span::before {
+    top: 0;
+}
+
+
+/* positie: aan de onderkant van de div*/
+span::after {
+    bottom: 0;
+}
+
+span:hover {
+    background: rgb(255, 255, 255);
+    transition: .5s ease-out;
+}
+
+/*
+  Hieronder zie je de stijl die getoggled wordt wanneer de div 'actief is. TIP VOOR MEZELF: Je kunt meerdere classes aan een element toevoegen kijk maar naar de span.
+*/
+.hamburgerbutton.active span {
+    /*Nu maak je de middelste streep transparant*/
+    background: rgba(0, 0, 0, 0);
+}
+
+/* Hier roteer je de bovenste lijn */
+.hamburgerbutton.active span::before {
+    top: 12px;
+    transform: rotate(135deg);
+
+}
+
+.hamburgerbutton.active span::after {
+    top: 12px;
+    transform: rotate(-135deg);
+}
+
+
+
+
+/************************************************
+                      MAIN (Articles)
+*************************************************/
+
+main {
+    width: 100%;
+}
+
+* article {
+    /*60px*/
+    margin-top: 0em;
+    /*16px*/
+    margin-right: 1em;
+    /*40px*/
+    margin-bottom: 2.5em;
+    margin-left: 1em;
+    padding: 3% 8%;
+    /*27px*/
+    line-height: 1.6875em;
+}
+
+@media (min-width:748px) {
+    article {
+        margin-top: 2.5em;
+        margin-right: 5em;
+        margin-bottom: 5em;
+        margin-left: 5em;
+    }
+}
+
+#articlespotlight {
+    background-color: rgb(53, 180, 161);
+    color: rgb(255, 255, 255);
+    /*20px*/
+    border-radius: 1.25em;
+}
+
+
+.articlesoverig {
+    background-color: rgb(218, 223, 104);
+    /*20px*/
+    border-radius: 1.25em;
+
+}
+
+.containertrucks {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+
+.articleitems {
+    width: 100%;
+}
+
+
+/*hier maak ik de artikelen weer een kolom wanneer het scherm naar mobiel gaat */
+
+@media (min-width:745px) {
+    .containertrucks {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .articleitems {
+        width: 50%;
+    }
+
+}
+
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.trucks {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+/*hier laat ik alle artikelen met class container uitklappen tot een rij wanner het scherm naar desktop gaat*/
+@media (min-width:877px) {
+    .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
+
+
+
+
+
+
+/************************************************
+                      MAIN (Form)
+*************************************************/
+
+form {
+    padding: 5%;
+    background-color: rgb(218, 223, 104);
+    margin: 1em;
+    /*20px*/
+    border-radius: 1.25em;
+}
+
+
+/*hier maak ik de margin groter wanner het scherm naar desktop gaat*/
+@media (min-width:748px) {
+    form {
+        margin-top: 2.5em;
+        margin-right: 5em;
+        margin-bottom: 5em;
+        margin-left: 5em;
+    }
+}
+
+label {
+    /*15px*/
+    font-size: 0.9375em;
+    font-family: 'acumin-pro', sans-serif;
+    display: block;
+    /*25px*/
+    margin: 1.5625em 0;
+}
+
+
+fieldset {
+    border: 5px solid;
+    /*4px*/
+    border-radius: 0.25em;
+    /*20px*/
+    margin: 1.25em 0;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+fieldset:valid {
+    border-color: rgb(0, 102, 51);
+    background: rgba(0, 102, 51, 0.5);
+    color: rgb(255, 255, 255);
+}
+
+fieldset:invalid {
+    border-color: rgb(255, 0, 0);
+    background-color: rgba(255, 0, 0, 0.5);
+    color: rgb(255, 255, 255);
+}
+
+/*hier selecteer ik het eerste fieldset tekst van de fieldset aanhef */
+fieldset fieldset:first-of-type {
+    display: flex;
+    flex-direction: row;
+    width: 60%;
+
+}
+
+/*hier selecteer ik de laatste input in de fieldset, de date input*/
+fieldset input:last-of-type {
+    display: flex;
+    /*4px*/
+    border-radius: 0.25em;
+    /*5px*/
+    margin: 0.3125em 0;
+    /*10px*/
+    padding: 0.625em 0.625em;
+}
+
+/*hier selecteer ik de laatste input in de fieldset Aanhef van de fieldset, de radio's */
+fieldset fieldset input:last-of-type {
+    /*5px*/
+    margin: 0.3125em 0;
+}
+
+legend {
+    /*25px*/
+    font-size: 1.5625em;
+    font-family: 'acumin-pro-condensed', sans-serif;
+}
+
+input {
+    /*15px*/
+    font-size: 0.9375em;
+    color: rgb(0, 0, 0);
+    /*2px*/
+    border: 0.125em solid rgb(225, 0, 0);
+}
+
+input:valid {
+    border-color: rgb(0, 102, 51);
+    background: rgba(0, 95, 51, 0.5);
+    color: rgb(255, 255, 255);
+}
+
+input:invalid {
+    border-color: rgb(255, 0, 0);
+    background-color: rgba(255, 0, 0, 0.5);
+}
+
+input:focus {
+    border-color: rgb(53, 180, 161);
+}
+
+input:active {
+    border-color: rgb(53, 180, 161);
+}
+
+input::placeholder {
+    color: rgba(0, 0, 0, .5);
+    font-style: italic;
+}
+
+
+#customer-type {
+    display: block;
+    /*16px*/
+    font-size: 1em;
+    color: rgb(0, 0, 0);
+    line-height: 1.3;
+    /*10px*/
+    padding: 0.625em 0.625em;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    /*4px*/
+    border-radius: 0.25em;
+    /*2px*/
+    border: 0.125em solid rgb(225, 0, 0);
+}
+
+/*Valid werkt niet, omdat er altijd een optie is aangevinkt, waardoor hij altijd groen is ookal heb je nog niets gekozen*/
+#customer-type:valid {
+    border-color: rgb(0, 102, 51);
+    background: rgba(0, 95, 51, 0.5);
+    color: rgb(255, 255, 255);
+
+}
+
+#customer-type:invalid {
+    border-color: rgb(255, 0, 0);
+    background-color: rgba(255, 0, 0, 0.5);
+    color: rgb(255, 255, 255);
+}
+
+/*hier maak ik de inputvelden korter wanneer je naar desktop gaat*/
+@media (min-width:745px) {
+    #customer-type {
+        width: 40%;
+    }
+}
+
+.gender {
+    display: flex;
+    flex-direction: row;
+}
+
+
+input[type=text] {
+    width: 100%;
+    /*4px*/
+    border-radius: 0.25em;
+    /*5px*/
+    margin: 0.3125em 0;
+    /*10px*/
+    padding: 0.625em 0.625em;
+}
+
+
+input[type=email] {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    /*4px*/
+    border-radius: 0.25em;
+    /*5px*/
+    margin: 0.3125em 0;
+    /*10px*/
+    padding: 0.625em 0.625em;
+}
+
+input[type=tel] {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    /*4px*/
+    border-radius: 0.25em;
+    /*5px*/
+    margin: 0.3125em 0;
+    /*10px*/
+    padding: 0.625em 0.625em;
+}
+
+/*hier maak ik de inputvelden korter wanneer je naar desktop gaat*/
+@media (min-width:745px) {
+
+    #firstname,
+    #lastname,
+    #birthdate,
+    #mail,
+    #tel {
+        width: 30%;
+    }
+}
+
+
+/************************************************
+                      FOOTER
+*************************************************/
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'acumin-pro-condensed', sans-serif;
+    /*25px*/
+    font-size: 1.5625em;
+    background-color: rgb(0, 102, 51);
+    color: rgb(218, 223, 104);
+    margin: 0;
+    /*23px*/
+    padding: 1.4375em;
+}
+
+/*hier maak ik de footer resposive en breekt ie bij 750px*/
+@media (min-width:750px) {
+    footer {
+        flex-direction: row;
+        justify-content: space-around;
+
+    }
+}

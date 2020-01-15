@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <!--    font acumin-->
+    <link rel="stylesheet" href="https://use.typekit.net/ewh4lpc.css">
+    <!-- BRONNEN:
+    - Dutch tel number pattern validation: https://stackoverflow.com/questions/17949757/regular-expression-for-dutch-phone-number -->
+
+</head>
+
+<body>
+
+    <header>
+        <div>
+            <div>
+                <a href="index.html"><img src="images/rent-a-foodtruck-logo.png" id="logo" alt="Rent-a-Foodtruck logo"></a>
+                <h1>Rent-a-Foodtruck</h1>
+            </div>
+
+            <div class="hamburgerbutton">
+                <span class="link"></span>
+            </div>
+        </div>
+
+        <nav class="navigation">
+            <ul>
+                <li><a href="index.html">MIJN AANVRAGEN/BOEKINGEN</a></li>
+                <li><a href="detailpagina.html">FOODTRUCKS</a></li>
+                <li><a href="Contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <form action="index.html">
+            <h2>Contact</h2>
+
+            <fieldset>
+
+                <legend>Personalia</legend>
+                <label for="customer-type">
+                    <select name="customer-type" id="customer-type" required="required">
+                        <option value="">Wat voor klant bent u?</option>
+                        <option value="consumer">Consument</option>
+                        <option value="business">Zakelijk</option>
+                    </select>
+                </label>
+
+                <fieldset>
+                    <legend>Aanhef</legend>
+                    <label for="male" class="gender">
+                        <input type="radio" name="gender" id="male" required="required">Meneer
+                    </label>
+                    <label for="female" class="gender">
+                        <input type="radio" name="gender" id="female" required="required">Mevrouw
+                    </label>
+                </fieldset>
+
+                <label for="firstname">Voornaam
+                    <input type="text" name="firstname" id="firstname" maxlength="20" placeholder="Vb.Michelino" required="required">
+                </label>
+                <label for="lastname">Achternaam
+                    <input type="text" name="lastname" id="lastname" maxlength="20" placeholder="Vb.Kelly" required="required">
+                </label>
+                <label for="birthdate">Geboortedatum
+                    <input type="date" name="birthdate" id="birthdate" required="required">
+                </label>
+
+            </fieldset>
+
+            <fieldset>
+
+                <legend>Contactgegevens</legend>
+                <label for="mail">E-mailadres
+                    <input type="email" name="mail" id="mail" placeholder="naam@example.com" required="required">
+                </label>
+
+                <!--BRON Dutch tel number pattern validation: https://stackoverflow.com/questions/17949757/regular-expression-for-dutch-phone-number-->
+                <label for="tel">Telefoonnummer
+                    <input type="tel" name="tel" id="tel" maxlength="" placeholder="+31" required="required" pattern="^\(?([+]31|0031|0)-?6(\s?|-)([0-9]\s{0,3}){8}$">
+                </label>
+
+            </fieldset>
+
+            <a href="index.html"><button type="submit">Verzenden</button></a>
+
+        </form>
+    </main>
+
+    <footer>
+        <section>Tel: +310621153828</section>
+        <section>E-mail: mail@rent-a-foodtruck.nl</section>
+        <section>Copyright Michelino Kelly</section>
+        <h5>ARUBA</h5>
+        <h6>ARUBA</h6>
+    </footer>
+
+
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

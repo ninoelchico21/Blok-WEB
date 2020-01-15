@@ -1,0 +1,117 @@
+Dingen die ik geprobeerd heb:
+
+een "back to top" button dmv een svg
+
+////BRON: https://getflywheel.com/layout/sticky-back-to-top-button-tutorial/
+//
+
+
+///**********************************************
+//                   HTML code
+//**********************************************
+
+<!--   BACK TO TOP BUTTON SVG CODE-->
+    <!--
+    <a class="top-link hide" href="" id="js-top">
+        <svg version="1.1" id="Laag_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 109 54.6" style="enable-background:new 0 0 109 54.6;" xml:space="preserve">
+            <path d="M0,54.7L54.3,0C72.6,18.2,90.8,36.4,109,54.6C72.7,54.7,36.3,54.7,0,54.7z" />
+        </svg></a>
+-->
+
+
+
+///**********************************************
+//                   CSS code
+//**********************************************
+
+
+
+/*    DIT IS DE STYLING VAN HET BACK-TO-TOP BUTTON:*/
+/*
+.top-link {
+    transition: all .25s ease-in-out;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    display: inline-flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    margin: 0 3em 3em 0;
+    border-radius: 20%;
+    padding: .25em;
+    width: 80px;
+    height: 80px;
+    background-color: #006633;
+}
+
+.top-link.show {
+    visibility: visible;
+    opacity: 1;
+}
+
+.top-link.hide {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.top-link svg {
+    fill: #DADF68;
+    width: 26px;
+    height: 13px;
+}
+
+.top-link:hover {
+    background-color: #005D2F;
+}
+
+.top-link:hover svg {
+    fill: #DADF68;
+}
+
+
+
+///**********************************************
+//              Javascript code
+//**********************************************
+
+//// HIer wordt een variabele aangemaakt voorcde buton element
+//var scrollToTopButton = document.getElementById('js-top');
+//
+//// Let's set up a function that shows our scroll-to-top button if we scroll beyond the height of the initial window.
+//var scrollFunc = () => {
+//    // Hiermee krijg je de huidige scroll waarde
+//    let y = window.scrollY;
+//
+//    // If the scroll value is greater than the window height, let's add a class to the scroll-to-top button to show it!
+//    if (y > 0) {
+//        scrollToTopButton.className = "top-link show";
+//    } else {
+//        scrollToTopButton.className = "top-link hide";
+//    }
+//};
+//
+//window.addEventListener("scroll", scrollFunc);
+//
+//var scrollToTop = () => {
+//    // Let's set a variable for the number of pixels we are from the top of the document.
+//    var c = document.documentElement.scrollTop || document.body.scrollTop;
+//
+//    // If that number is greater than 0, we'll scroll back to 0, or the top of the document.
+//    // We'll also animate that scroll with requestAnimationFrame:
+//    // https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame
+//    if (c > 0) {
+//        window.requestAnimationFrame(scrollToTop);
+//        // ScrollTo takes an x and a y coordinate.
+//        // Increase the '10' value to get a smoother/slower scroll!
+//        window.scrollTo(0, c - c / 10);
+//    }
+//};
+//
+//// Wanneer er op de knop geklikt word, wordt ScrolltoTop function gerunt
+//scrollToTopButton.onclick = function (e) {
+//    e.preventDefault();
+//    scrollToTop();
+//}
+
+
