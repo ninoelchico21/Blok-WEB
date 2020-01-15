@@ -1,45 +1,16 @@
-////BRON: https://getflywheel.com/layout/sticky-back-to-top-button-tutorial/
-//
-//// HIer wordt een variabele aangemaakt voorcde buton element
-//var scrollToTopButton = document.getElementById('js-top');
-//
-//// Let's set up a function that shows our scroll-to-top button if we scroll beyond the height of the initial window.
-//var scrollFunc = () => {
-//    // Hiermee krijg je de huidige scroll waarde
-//    let y = window.scrollY;
-//
-//    // If the scroll value is greater than the window height, let's add a class to the scroll-to-top button to show it!
-//    if (y > 0) {
-//        scrollToTopButton.className = "top-link show";
-//    } else {
-//        scrollToTopButton.className = "top-link hide";
-//    }
-//};
-//
-//window.addEventListener("scroll", scrollFunc);
-//
-//var scrollToTop = () => {
-//    // Let's set a variable for the number of pixels we are from the top of the document.
-//    var c = document.documentElement.scrollTop || document.body.scrollTop;
-//
-//    // If that number is greater than 0, we'll scroll back to 0, or the top of the document.
-//    // We'll also animate that scroll with requestAnimationFrame:
-//    // https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame
-//    if (c > 0) {
-//        window.requestAnimationFrame(scrollToTop);
-//        // ScrollTo takes an x and a y coordinate.
-//        // Increase the '10' value to get a smoother/slower scroll!
-//        window.scrollTo(0, c - c / 10);
-//    }
-//};
-//
-//// Wanneer er op de knop geklikt word, wordt ScrolltoTop function gerunt
-//scrollToTopButton.onclick = function (e) {
-//    e.preventDefault();
-//    scrollToTop();
-//}
+//BRON hamburgermenu inspiratie: https://codepen.io/Guilano/pen/jOOgZKE
 
+// Variabelen opstellen: select the HTML elements which you want to manipulate
+var hamburgerbutton = document.querySelector('.hamburgerbutton');
+//var lijn = document.querySelector('.lijn');
+var navigation = document.querySelector('.navigation');
 
-/**********************************************
-        !!!!NOG AAN TE PASSEN!!!!
-**********************************************
+// Hier hang ik een oortje aan de hamburgermenu die checkt of er een klik plaatsvind.
+// Bij een click wordt de functie hamburgeranimatie gerunned.
+hamburgerbutton.addEventListener('click', hamburgerAnimatie);
+
+// Deze functie toggled de classes hamburgerbutton en navigation. Deze kun je in css vinden.
+function hamburgerAnimatie() {
+    hamburgerbutton.classList.toggle('active');
+    navigation.classList.toggle('active');
+}
